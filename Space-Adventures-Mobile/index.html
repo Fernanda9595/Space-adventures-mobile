@@ -14,14 +14,15 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div class="touch-controls">
-    <button id="left-btn">⯇</button>
-    <button id="shoot-btn">⭘</button>
-    <button id="right-btn">⯈</button>
+    <!-- Controles para toque em dispositivos móveis -->
+    <div class="touch-controls" aria-label="Controles de toque">
+        <button id="left-btn" aria-label="Mover para a esquerda">⯇</button>
+        <button id="shoot-btn" aria-label="Atirar">⭘</button>
+        <button id="right-btn" aria-label="Mover para a direita">⯈</button>
     </div>
 
     <!-- HUD do jogo com pontuação, nível e recorde -->
-    <section class="score-ui">
+    <section class="score-ui" style="display: none;">
         <div>
             <span class="score">score: <span>0</span></span>
             <span class="level">level: <span>1</span></span>
@@ -39,7 +40,7 @@
     </section>
 
     <!-- Tela de "Game Over" exibida após o fim do jogo -->
-    <section class="game-over screen">
+    <section class="game-over screen" style="display: none;">
         <div>
             <h1>Game Over</h1>
             <button class="button-restart">Restart</button>
@@ -51,6 +52,5 @@
 
     <!-- Importa o script principal usando ES Modules -->
     <script type="module" src="src/index.js"></script>
-
 </body>
 </html>
