@@ -1,4 +1,4 @@
-// Importação das classes utilizadas no jogo
+// Importação das classes utilizadas no jogo 
 import Grid from "./classes/Grid.js";
 import Obstacle from "./classes/Obstacle.js";
 import Particle from "./classes/Particle.js";
@@ -57,13 +57,11 @@ const invadersProjectiles = [];
 const particles = [];
 const obstacles = [];
 
-// Inicializa obstáculos
+// Inicializa obstáculos (agora com apenas um)
 const initObstacles = () => {
   const y = canvas.height - 250;
   const x = canvas.width / 2 - 50;
-  const offset = canvas.width * 0.15;
-  obstacles.push(new Obstacle({ x: x - offset, y }, 100, 20, "crimson"));
-  obstacles.push(new Obstacle({ x: x + offset, y }, 100, 20, "crimson"));
+  obstacles.push(new Obstacle({ x: x, y }, 100, 20, "crimson"));
 };
 initObstacles();
 
@@ -97,7 +95,6 @@ const generateStars = () => {
   }
 };
 
-// Desenho
 const drawStars = () => stars.forEach(s => { s.draw(ctx); s.update(); });
 const drawProjectiles = () => [...playerProjectiles, ...invadersProjectiles].forEach(p => { p.draw(ctx); p.update(); });
 const drawParticles = () => particles.forEach(p => { p.draw(ctx); p.update(); });

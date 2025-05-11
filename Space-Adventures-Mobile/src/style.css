@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Press Start 2P", sans-serif, Arial, Helvetica;
+  border: none; /* Remove bordas de todos os elementos */
 }
 
 body {
@@ -80,7 +81,7 @@ canvas {
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   user-select: none;
-  outline: none;
+  outline: none; /* Garante que não tenha borda de foco */
 }
 
 .button-play:hover,
@@ -150,6 +151,7 @@ canvas {
   color: white;
   border: none;
   opacity: 0.7;
+  outline: none; /* Garante que não tenha borda de foco */
 }
 
 /* ------------------- MEDIA QUERY MOBILE ------------------- */
